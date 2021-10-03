@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projeto Bootstrap</title>
+		
+		<!-- Importante para habilitar os recursos de Responsividade em conjunto com o CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+  		        
+  		<link rel="stylesheet" href="css/bootstrap.css">
+      <style>
+        .justificado{
+          text-align: justify;
+        }
+        h4{
+          margin-bottom: 2px;
+        }
+        #login, #email, #telefone{
+          margin-bottom: 20px;
+          width: 500px;
+          border-radius: 6px;
+        }
+        #mensagem{
+             resize: none;
+             height: 250px;
+             border-radius: 7px;
+         }
+         #botaoEnviar{
+          margin-top: 20px;
+          width: 500px;
+         }
+         #botaoFechar{
+          margin-left: 260px;
+          margin-bottom: 20px;
+         }
+      </style>
+	</head>
+	
+  <body>
+  		
+      	<div class="navbar navbar-inverse navbar-fixed-top">
+        		<div class="container">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+
+                  <a class="navbar-brand" href="index.html">MOBILI</a>
+        			
+                  <div class="navbar-collapse collapse navbar-right">
+                     <ul class="nav navbar-nav">
+                       <li><a href="index.html">HOME</a></li>
+                       <li><a href="aEmpresa.html">A EMPRESA</a></li>
+                       <li><a href="produtos.html">PRODUTOS</a></li>
+                       <li><a href="servicos.html">SERVICOS</a></li>
+                       <li class="active"><a href="contatos.html">CONTATO</a></li>
+                    </ul>
+                  </div>           
+        	  </div>
+      	</div>	
+
+        <div class="jumbotron">
+            <div class="container">
+            	<br>
+              <h1>Desenvolvimento de sistemas</h1>
+              
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-md-">
+                  <h2>FALE CONOSCO</h2><br>
+                      <div class="input-group input-group-lg">
+                       <h4>Nome</h4>
+                       <input type="text" id="login" placeholder="Seu nome" class="form-control">
+              			   <h4>E-mail</h4>
+                       <input type="text" id="email" placeholder="Seu e-mail" class="form-control">
+              			   <h4>Telefone</h4>
+                       <input type="number" id="telefone" placeholder="Seu contato" class="form-control">
+              			   <h4>Mensagem</h4>
+                        <textarea id="mensagem" maxlength="580" placeholder="Escreva sua mensagem" class="form-control"></textarea>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary" id="botaoEnviar" data-toggle="modal" data-target="#mensagemDeConfirmacao" value="Refresh Page" >Enviar</button>
+                        </div>
+                      </div>
+              </div>
+            </div>
+            <!--Modal-->
+            <div class="modal fade" id="mensagemDeConfirmacao" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                   <h4 class = "modal-title">Confirmação</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Sua mensagem foi encaminhada com sucesso! Aguarde nosso retorno.</p>
+              </div>
+              <div class="modal-footer"></div>
+              <button id="botaoFechar" type="button" class="btn btn-success" data-dismiss="modal" onclick="window.location.reload()">Fechar</button>
+            </div>
+           </div>
+         </div>
+            <hr>
+            <footer>
+              <p>&copy; MOBILI 2014</p>
+            </footer>
+        </div>
+  </body>
+	
+</html>
